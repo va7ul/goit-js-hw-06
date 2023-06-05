@@ -22,3 +22,16 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+
+.list-item {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+    border-width: 2px;
+    border-style: dashed
+}
+
+.list-item-img {
+  width: 500px;
+  height: 300px;
+}
