@@ -1,12 +1,13 @@
 const inputEl = document.querySelector("#validation-input");
 
 const inputFormHandler = () => {
-    if (inputEl.value.length < inputEl.getAttribute("data-length")) {
+
+    if (inputEl.value.length === Number(inputEl.getAttribute("data-length"))) {
+        inputEl.classList.remove("invalid")
+        inputEl.classList.add("valid");
+    } else {
         inputEl.classList.add("invalid");
         inputEl.classList.remove("valid")
-    } else {
-        inputEl.classList.add("valid");
-        inputEl.classList.remove("invalid")
     }
 };
 
@@ -19,9 +20,9 @@ inputEl.addEventListener('blur', inputFormHandler);
 // inputEl.addEventListener('blur', inputFormHandler);
 
 // function inputFormHandler() {
-//     if (inputEl.value.length < inputEl.getAttribute("data-length")) {
-//         inputEl.classList.add("invalid");
-//     } else {
-//         inputEl.classList.add("valid");
+    // if (inputEl.value.length === Number(inputEl.getAttribute("data-length"))) {
+    //         inputEl.classList.add("valid");
+    //     } else {
+        //     inputEl.classList.add("invalid");
 //     }
 // };
